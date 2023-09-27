@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="streamVM" type="com.socialnetworking.app.modules.stream.data.viewmodel.StreamVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearColumnseven"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" android:orientation="vertical">
+        <androidx.recyclerview.widget.RecyclerView
+            android:gravity="top|center"
+            android:id="@+id/recyclerStream"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            itemSpace="@{@dimen/_21pxh}" tools:itemCount="2" tools:listitem="@layout/row_stream"/>
+    </LinearLayout>
+</layout>

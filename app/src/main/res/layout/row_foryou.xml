@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="foryouRowModel" type="com.socialnetworking.app.modules.foryou.data.model.ForyouRowModel"/>
+    </data>
+    <FrameLayout android:id="@+id/frameStackfortythree"
+        android:layout_height="wrap_content" android:layout_width="@dimen/_152pxh">
+        <ImageView android:id="@+id/imageFortyThree"
+            android:layout_gravity="center"
+            android:layout_height="@dimen/_251pxh"
+            android:layout_width="@dimen/_152pxh"
+            android:scaleType="fitXY" cornerRadius="@{@dimen/_15pxh}"
+            imageRes="@{@drawable/img_43_251x152}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_43_251x152"/>
+        <LinearLayout android:id="@+id/linearRowellipsenine"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/_16pxh"
+            android:paddingVertical="@dimen/_16pxv" style="@style/groupStylecornerRadius_4">
+            <ImageView android:id="@+id/imageEllipseNine"
+                android:layout_height="@dimen/_30pxh"
+                android:layout_width="@dimen/_30pxh"
+                android:scaleType="centerCrop" circular="@{true}"
+                imageRes="@{@drawable/img_ellipse9_30x30_1}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_ellipse9_30x30_1"/>
+            <TextView android:ellipsize="end" android:id="@+id/txtName"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{foryouRowModel.txtName}"
+                style="@style/txtIntersemibold12" tools:text="@string/lbl_elisa_carl"/>
+        </LinearLayout>
+    </FrameLayout>
+</layout>

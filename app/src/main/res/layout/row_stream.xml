@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="streamRowModel" type="com.socialnetworking.app.modules.stream.data.model.StreamRowModel"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearColumntwentyseven"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content" android:orientation="vertical">
+        <ImageView android:id="@+id/imageTwentySeven"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_540pxh"
+            android:layout_width="@dimen/_356pxh"
+            android:scaleType="fitXY" cornerRadius="@{@dimen/_15pxh}"
+            imageRes="@{@drawable/img_27_540x356}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_27_540x356"/>
+        <LinearLayout android:gravity="end"
+            android:id="@+id/linearRowellipseeleven"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="horizontal">
+            <ImageView android:id="@+id/imageEllipseEleven"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/_50pxh"
+                android:layout_width="@dimen/_50pxh"
+                android:scaleType="centerCrop" circular="@{true}"
+                imageRes="@{@drawable/img_ellipse11_50x50}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_ellipse11_50x50"/>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearColumnname"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtName"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@{streamRowModel.txtName}"
+                    style="@style/txtIntersemibold20_1" tools:text="@string/lbl_rosalia"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtDuration"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@{streamRowModel.txtDuration}"
+                    style="@style/txtInterregular14" tools:text="@string/lbl_45_minutes_ago"/>
+            </LinearLayout>
+            <FrameLayout android:id="@+id/frameGroup2755"
+                android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+            <ImageView android:id="@+id/imageEllipseElevenOne"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/_50pxh"
+                android:layout_width="@dimen/_50pxh"
+                android:scaleType="centerCrop" circular="@{true}"
+                imageRes="@{@drawable/img_ellipse11_50x50}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_ellipse11_50x50"/>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearColumnnameone"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtNameOne"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@{streamRowModel.txtNameOne}"
+                    style="@style/txtIntersemibold20_1" tools:text="@string/lbl_rosalia"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtDurationOne"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@{streamRowModel.txtDurationOne}"
+                    style="@style/txtInterregular14" tools:text="@string/lbl_45_minutes_ago"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

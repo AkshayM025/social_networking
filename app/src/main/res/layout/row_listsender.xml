@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="listsenderRowModel" type="com.socialnetworking.app.modules.messages.data.model.ListsenderRowModel"/>
+    </data>
+    <LinearLayout android:gravity="center_vertical"
+        android:id="@+id/linearRowellipsetwentytwo"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <FrameLayout android:id="@+id/frameStack"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_54pxv" android:layout_width="@dimen/_52pxh">
+            <ImageView android:id="@+id/imageEllipseTwentyTwo"
+                android:layout_gravity="center"
+                android:layout_height="@dimen/_54pxh"
+                android:layout_width="@dimen/_52pxh"
+                android:scaleType="fitXY"
+                cornerRadius="@{@dimen/_27pxh}"
+                imageRes="@{@drawable/img_ellipse22_54x52_1}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_ellipse22_54x52_1"/>
+            <View
+                android:background="@drawable/rectangle_bg_green_a700_border_white_a700_radius_6"
+                android:id="@+id/viewEllipseFifty"
+                android:layout_gravity="bottom|end"
+                android:layout_height="@dimen/_13pxh" android:layout_width="@dimen/_13pxh"/>
+        </FrameLayout>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearColumnsender"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtSender"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{listsenderRowModel.txtSender}"
+                style="@style/txtInterbold16" tools:text="@string/lbl_richard_alves"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtMessage"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{listsenderRowModel.txtMessage}"
+                style="@style/txtInterregular16" tools:text="@string/msg_hey_bro_where"/>
+        </LinearLayout>
+        <FrameLayout android:id="@+id/frameGroup2700"
+            android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtTime"
+            android:layout_gravity="top"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:text="@{listsenderRowModel.txtTime}"
+            style="@style/txtInterregular16" tools:text="@string/lbl_10_00_am"/>
+    </LinearLayout>
+</layout>

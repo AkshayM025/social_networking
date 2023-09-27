@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="listnineteen1RowModel" type="com.socialnetworking.app.modules.stories.data.model.Listnineteen1RowModel"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearColumnnineteen"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content" android:orientation="vertical">
+        <FrameLayout android:id="@+id/frameStacknineteen"
+            android:layout_height="@dimen/_144pxv" android:layout_width="@dimen/_147pxh">
+            <ImageView android:id="@+id/imageNineteen"
+                android:layout_gravity="center"
+                android:layout_height="@dimen/_144pxh"
+                android:layout_width="@dimen/_147pxh"
+                android:scaleType="fitXY"
+                cornerRadius="@{@dimen/_10pxh}"
+                imageRes="@{@drawable/img_19_144x147_1}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_19_144x147_1"/>
+            <LinearLayout android:id="@+id/linearRowvideocamera"
+                android:layout_gravity="top|start"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/_3pxv"
+                android:paddingEnd="@dimen/_8pxh"
+                android:paddingStart="@dimen/_8pxh"
+                android:paddingTop="@dimen/_3pxv" style="@style/groupStyledeep_purple_A200cornerRadius">
+                <ImageView android:id="@+id/imageVideocamera"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_12pxh"
+                    android:layout_width="@dimen/_12pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_videocamera"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_videocamera"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtType"
+                    android:layout_gravity="bottom"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{listnineteen1RowModel.txtType}"
+                    style="@style/txtIntermedium10" tools:text="@string/lbl_live2"/>
+            </LinearLayout>
+        </FrameLayout>
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtLIVEWeTheFest"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            android:text="@{listnineteen1RowModel.txtLIVEWeTheFest}"
+            style="@style/txtIntersemibold14" tools:text="@string/msg_live_we_the_f"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtPrice"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            android:text="@{listnineteen1RowModel.txtPrice}"
+            style="@style/txtInterregular12_1" tools:text="@string/msg_19_00_forg"/>
+    </LinearLayout>
+</layout>

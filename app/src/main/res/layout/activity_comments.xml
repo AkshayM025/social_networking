@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="commentsVM" type="com.socialnetworking.app.modules.comments.data.viewmodel.CommentsVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearComments"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearColumnclose"
+            android:layout_height="0dp" android:layout_weight="1.0"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_13pxv" android:paddingTop="@dimen/_13pxv">
+            <ImageView android:id="@+id/imageClose"
+                android:layout_height="@dimen/_24pxh"
+                android:layout_width="@dimen/_24pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_close"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_close"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtComments"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:lineSpacingExtra="@dimen/_7pxh"
+                android:singleLine="true"
+                android:text="@{commentsVM.commentsModel.txtComments}"
+                style="@style/txtInterbold32" tools:text="@string/lbl_comments"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerComments"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:paddingEnd="@dimen/_16pxh"
+                android:paddingStart="@dimen/_16pxh"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                itemSpace="@{@dimen/_14pxh}" tools:itemCount="3" tools:listitem="@layout/row_comments"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical"
+            android:id="@+id/linearRowframethirtysix"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <EditText
+                android:background="@drawable/rectangle_bg_gray_100_01_radius_25"
+                android:ellipsize="end" android:fontFamily="@font/inter"
+                android:hint="@string/lbl_write_a_comment"
+                android:id="@+id/etFrameThirtySix"
+                android:inputType="text"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:lineSpacingExtra="@dimen/_3pxh"
+                android:paddingBottom="@dimen/_16pxv"
+                android:paddingEnd="@dimen/_12pxh"
+                android:paddingStart="@dimen/_12pxh"
+                android:paddingTop="@dimen/_16pxv"
+                android:singleLine="true"
+                android:text="@={commentsVM.commentsModel.etFrameThirtySixValue}"
+                android:textColor="@color/gray_500_02"
+                android:textColorHint="@color/gray_500_02"
+                android:textFontWeight="500"
+                android:textSize="@dimen/_14pxh"
+                android:textStyle="bold" tools:ignore="Autofill"/>
+            <ImageButton
+                android:background="@drawable/rectangle_bg_deep_purple_a200_radius_25"
+                android:id="@+id/btnSend"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/_50pxh"
+                android:layout_width="@dimen/_50pxh"
+                android:paddingHorizontal="@dimen/_13pxh"
+                android:paddingVertical="@dimen/_13pxv"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_send_50x50" tools:ignore="ContentDescription"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

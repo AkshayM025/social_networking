@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="listeightRowModel" type="com.socialnetworking.app.modules.accountdetails.data.model.ListeightRowModel"/>
+    </data>
+    <ImageView android:id="@+id/imageEight"
+        android:layout_height="@dimen/_161pxv"
+        android:layout_width="@dimen/_117pxh" android:scaleType="fitXY"
+        cornerRadius="@{@dimen/_10pxh}"
+        imageRes="@{@drawable/img_46_161x117}"
+        tools:ignore="ContentDescription" tools:src="@drawable/img_46_161x117"/>
+</layout>

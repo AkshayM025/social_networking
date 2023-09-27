@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="searchVM" type="com.socialnetworking.app.modules.search.data.viewmodel.SearchVM"/>
+    </data>
+    <LinearLayout android:gravity="start" android:id="@+id/linearSearch"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/_13pxv"
+        android:paddingEnd="@dimen/_16pxh"
+        android:paddingStart="@dimen/_16pxh"
+        android:paddingTop="@dimen/_13pxv" style="@style/groupStylewhite_A700">
+        <ImageView android:id="@+id/imageClose"
+            android:layout_height="@dimen/_24pxh"
+            android:layout_width="@dimen/_24pxh"
+            android:scaleType="fitXY" android:src="@drawable/img_close"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_close"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtSearch"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:lineSpacingExtra="@dimen/_7pxh"
+            android:singleLine="true"
+            android:text="@{searchVM.searchModel.txtSearch}"
+            style="@style/txtInterbold32" tools:text="@string/lbl_search"/>
+        <androidx.appcompat.widget.SearchView
+            android:background="@drawable/rectangle_bg_gray_100_radius_20"
+            android:id="@+id/searchViewGroup9116"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:theme="@style/searchViewGroup9116"
+            app:iconifiedByDefault="false"
+            app:queryBackground="@android:color/transparent"
+            app:queryHint="@string/lbl_search" app:searchIcon="@drawable/img_search_gray_400"/>
+        <LinearLayout android:id="@+id/linearRowrecently"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtRecently"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:lineSpacingExtra="@dimen/_5pxh"
+                android:singleLine="true"
+                android:text="@{searchVM.searchModel.txtRecently}"
+                style="@style/txtInterbold20" tools:text="@string/lbl_recently"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtClearAll"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{searchVM.searchModel.txtClearAll}"
+                style="@style/txtIntermedium16_1" tools:text="@string/lbl_clear_all"/>
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerSearch"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            itemSpace="@{@dimen/_34pxh}" tools:itemCount="7" tools:listitem="@layout/row_search"/>
+    </LinearLayout>
+</layout>

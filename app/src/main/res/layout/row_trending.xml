@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="trendingRowModel" type="com.socialnetworking.app.modules.trending.data.model.TrendingRowModel"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearColumnforty"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyledeep_purple_1">
+        <FrameLayout android:id="@+id/frameStackforty"
+            android:layout_height="@dimen/_221pxv" android:layout_width="@dimen/_382pxh">
+            <ImageView android:id="@+id/imageForty"
+                android:layout_gravity="center"
+                android:layout_height="@dimen/_221pxh"
+                android:layout_width="@dimen/_382pxh"
+                android:scaleType="fitXY"
+                cornerRadius="@{@dimen/_15pxh}"
+                imageRes="@{@drawable/img_40_221x382_1}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_40_221x382_1"/>
+            <LinearLayout android:id="@+id/linearRowellipseseven"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/_18pxv"
+                android:paddingEnd="@dimen/_16pxh"
+                android:paddingStart="@dimen/_16pxh"
+                android:paddingTop="@dimen/_18pxv" style="@style/groupStylecornerRadius_3">
+                <ImageView android:id="@+id/imageEllipseSeven"
+                    android:layout_height="@dimen/_50pxh"
+                    android:layout_width="@dimen/_50pxh"
+                    android:scaleType="centerCrop" circular="@{true}"
+                    imageRes="@{@drawable/img_ellipse7_50x50}"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_ellipse7_50x50"/>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearColumnname"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="vertical">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtName"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{trendingRowModel.txtName}"
+                        style="@style/txtIntersemibold20_2" tools:text="@string/lbl_rick_onad"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtTime"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{trendingRowModel.txtTime}"
+                        style="@style/txtInterregular14_1" tools:text="@string/lbl_40_min_ago"/>
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+        <TextView android:id="@+id/txtDescription"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="@{trendingRowModel.txtDescription}"
+            style="@style/txtInterregular16_1" tools:text="@string/msg_this_is_the_mom"/>
+        <LinearLayout android:id="@+id/linearRowhuge"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <TextView android:ellipsize="end" android:id="@+id/txtHuge"
+                android:layout_gravity="bottom"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{trendingRowModel.txtHuge}"
+                style="@style/txtInterregular14_1" tools:text="@string/lbl_huge"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtFotography"
+                android:layout_gravity="bottom"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{trendingRowModel.txtFotography}"
+                style="@style/txtInterregular14_1" tools:text="@string/lbl_fotography"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtNature" android:layout_gravity="top"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{trendingRowModel.txtNature}"
+                style="@style/txtInterregular14_1" tools:text="@string/lbl_nature"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

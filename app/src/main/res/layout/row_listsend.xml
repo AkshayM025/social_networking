@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="listsendRowModel" type="com.socialnetworking.app.modules.storiesandtweets.data.model.ListsendRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearColumnsend"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content" android:orientation="vertical">
+        <ImageButton
+            android:background="@drawable/rectangle_bg_deep_purple_a200_radius_32"
+            android:id="@+id/btnSend"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_64pxh"
+            android:layout_width="@dimen/_64pxh"
+            android:paddingHorizontal="@dimen/_15pxh"
+            android:paddingVertical="@dimen/_15pxv"
+            android:scaleType="fitCenter"
+            android:src="@drawable/img_send" tools:ignore="ContentDescription"/>
+        <TextView android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:id="@+id/txtNewPost"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            android:text="@{listsendRowModel.txtNewPost}"
+            style="@style/txtIntermedium12" tools:text="@string/lbl_new_post"/>
+    </LinearLayout>
+</layout>

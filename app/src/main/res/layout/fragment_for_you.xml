@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="forYouVM" type="com.socialnetworking.app.modules.foryou.data.viewmodel.ForYouVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearColumnfortythree"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" android:orientation="vertical">
+        <androidx.recyclerview.widget.RecyclerView
+            android:gravity="top|end" android:id="@+id/recyclerForyou"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            itemSpace="@{@dimen/_14pxh}" tools:itemCount="3" tools:listitem="@layout/row_foryou"/>
+    </LinearLayout>
+</layout>

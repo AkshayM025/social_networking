@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="listnineteenRowModel" type="com.socialnetworking.app.modules.dailynew.data.model.ListnineteenRowModel"/>
+    </data>
+    <FrameLayout android:id="@+id/frameStacknineteen"
+        android:layout_height="wrap_content" android:layout_width="@dimen/_147pxh">
+        <ImageView android:id="@+id/imageNineteen"
+            android:layout_gravity="center"
+            android:layout_height="@dimen/_179pxh"
+            android:layout_width="@dimen/_147pxh"
+            android:scaleType="fitXY" cornerRadius="@{@dimen/_15pxh}"
+            imageRes="@{@drawable/img_19_179x147_1}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_19_179x147_1"/>
+        <LinearLayout android:id="@+id/linearRowellipsefifteen"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/_12pxv"
+            android:paddingTop="@dimen/_12pxv" style="@style/groupStylecornerRadius_1">
+            <FrameLayout android:id="@+id/frameStackellipsefifteen"
+                android:layout_height="@dimen/_34pxv"
+                android:layout_width="@dimen/_34pxh"
+                android:paddingHorizontal="@dimen/_3pxh"
+                android:paddingVertical="@dimen/_3pxv" style="@style/groupStylecornerRadius_2">
+                <ImageView android:id="@+id/imageEllipseFifteen"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/_28pxh"
+                    android:layout_width="@dimen/_28pxh"
+                    android:scaleType="centerCrop" circular="@{true}"
+                    imageRes="@{@drawable/img_ellipse15_28x28_1}"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_ellipse15_28x28_1"/>
+            </FrameLayout>
+            <TextView android:ellipsize="end" android:id="@+id/txtName"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{listnineteenRowModel.txtName}"
+                style="@style/txtIntermedium10" tools:text="@string/lbl_agness_monica"/>
+        </LinearLayout>
+    </FrameLayout>
+</layout>

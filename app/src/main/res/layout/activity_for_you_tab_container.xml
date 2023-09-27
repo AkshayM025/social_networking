@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="forYouTabContainerVM" type="com.socialnetworking.app.modules.foryoutabcontainer.data.viewmodel.ForYouTabContainerVM"/>
+    </data>
+    <FrameLayout android:id="@+id/frameStackforyou"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" style="@style/groupStylewhite_A700">
+        <FrameLayout android:id="@+id/frameStackpexelshongson3942851"
+            android:layout_gravity="center"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent" style="@style/groupStyle_3">
+            <View
+                android:background="@drawable/rectangle_gradient_s_black_900_7f_e_gray_400_00"
+                android:id="@+id/viewPexelshongson3942851"
+                android:layout_gravity="top|center"
+                android:layout_height="@dimen/_185pxv" android:layout_width="@dimen/_414pxh"/>
+            <LinearLayout android:id="@+id/linearColumnellipsenine"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical" style="@style/groupStyle_2">
+                <androidx.appcompat.widget.Toolbar
+                    android:gravity="center_horizontal"
+                    android:id="@+id/toolbarAppbar"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" app:contentInsetStart="0dp">
+                    <ImageView android:id="@+id/imageEllipseNine"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:scaleType="centerCrop"
+                        circular="@{true}"
+                        imageRes="@{@drawable/img_ellipse9_50x50}"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_ellipse9_50x50"/>
+                    <LinearLayout android:id="@+id/linearGroup25"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent" android:orientation="vertical">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtLanguage"
+                            android:layout_gravity="start"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@{forYouTabContainerVM.forYouTabContainerModel.txtLanguage}"
+                            style="@style/txtIntersemibold20_2" tools:text="@string/lbl_lucas_anna"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txt3516"
+                            android:layout_gravity="start"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@{forYouTabContainerVM.forYouTabContainerModel.txt3516}"
+                            style="@style/txtInterregular14_1" tools:text="@string/lbl_35_16"/>
+                    </LinearLayout>
+                    <ImageView android:id="@+id/imageClose"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_close_24x24"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_close_24x24"/>
+                </androidx.appcompat.widget.Toolbar>
+            </LinearLayout>
+        </FrameLayout>
+        <LinearLayout android:id="@+id/linearColumnforyou"
+            android:layout_gravity="bottom|center"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayoutGroup9148"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" app:tabMode="fixed"
+                app:tabSelectedTextColor="@color/white_A700" app:tabTextColor="@color/white_A700_99"/>
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPagerTabbarview"
+                android:layout_height="match_parent"
+                android:layout_weight="1" android:layout_width="match_parent"/>
+        </LinearLayout>
+    </FrameLayout>
+</layout>
